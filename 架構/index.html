@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>同在在銅 Tongarenza Tinung</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        forest: '#1c352d',  /* 深森林綠 */
+                        sand: '#f4efe9',    /* 溫潤米沙色 */
+                        gold: '#9e7a56',    /* 金棕色 */
+                        charcoal: '#2b2b2b' /* 深炭灰 */
+                    },
+                    fontFamily: {
+                        sans: ['PingFang TC', 'Heiti TC', 'Microsoft JhengHei', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* 模擬主視覺的山景背景 */
+        .hero-bg {
+            background: linear-gradient(to bottom, rgba(28, 53, 45, 0.3), rgba(28, 53, 45, 0.7)), 
+                        url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="font-sans text-charcoal bg-white antialiased">
+
+    <nav class="absolute top-0 left-0 w-full z-50 flex justify-between items-center px-8 py-6 text-white bg-gradient-to-b from-black/40 to-transparent">
+        <div class="flex items-center space-x-3">
+            <div class="border border-white p-2 text-xs tracking-widest text-center font-bold">
+                同在<br>在銅
+            </div>
+            <div>
+                <h1 class="text-xl font-bold tracking-wider">同在在銅</h1>
+                <p class="text-xs opacity-80 tracking-widest">Tongarenza Tinung</p>
+            </div>
+        </div>
+        <div class="hidden md:flex items-center space-x-10 text-sm tracking-widest font-medium">
+            <a href="#" class="hover:text-gold transition">首頁<br><span class="text-[10px] block text-center opacity-60">Home</span></a>
+            <a href="#" class="hover:text-gold transition">文化地圖<br><span class="text-[10px] block text-center opacity-60">Map</span></a>
+            <a href="#" class="hover:text-gold transition">文化故事<br><span class="text-[10px] block text-center opacity-60">Stories</span></a>
+            <a href="#" class="hover:text-gold transition">活動資訊<br><span class="text-[10px] block text-center opacity-60">Events</span></a>
+            <a href="#" class="hover:text-gold transition">關於我們<br><span class="text-[10px] block text-center opacity-60">About</span></a>
+            <a href="#" class="bg-forest/80 border border-white/40 px-5 py-2.5 rounded-full flex items-center space-x-2 hover:bg-gold hover:border-transparent transition">
+                <i class="fa-solid fa-location-dot text-xs"></i>
+                <span>開啟地圖</span>
+            </a>
+        </div>
+    </nav>
+
+    <header class="hero-bg h-[100vh] flex items-center px-8 md:px-24 relative text-white">
+        <div class="max-w-2xl space-y-6 z-10 pt-20">
+            <h2 class="text-4xl md:text-6xl font-bold tracking-wide leading-tight">
+                這片土地，<br>有它自己的語言。
+            </h2>
+            <div class="h-[1px] w-16 bg-white/60 my-4"></div>
+            <p class="text-sm md:text-base opacity-90 leading-relaxed tracking-wide">
+                我們走在同一條溪流與山徑之間，<br>
+                這些土地不只是風景，而是記憶與故事的所在。
+            </p>
+            <p class="text-sm opacity-80 leading-relaxed tracking-wide">
+                「同在在銅」文化地圖，記錄銅門的土地、語言與生活，<br>
+                讓每一個地方，都能被重新聽見。
+            </p>
+            <button class="mt-4 border border-white px-6 py-3 rounded-full text-sm tracking-widest flex items-center space-x-3 hover:bg-white hover:text-forest transition font-medium">
+                <span>探索文化地圖</span>
+                <i class="fa-solid fa-arrow-right-long"></i>
+            </button>
+        </div>
+        
+        <div class="absolute right-8 top-1/3 hidden lg:flex flex-col items-center space-y-4 opacity-40">
+            <div class="w-4 h-4 rotate-45 border-2 border-white"></div>
+            <div class="w-1 h-20 bg-white"></div>
+            <div class="w-4 h-4 rotate-45 border-2 border-white bg-white"></div>
+            <div class="w-1 h-20 bg-white"></div>
+            <div class="w-4 h-4 rotate-45 border-2 border-white"></div>
+        </div>
+    </header>
+
+    <section class="bg-sand py-20 px-8 md:px-24 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div class="lg:col-span-3 space-y-6">
+            <h3 class="text-3xl font-bold tracking-wider text-forest border-b border-forest/20 pb-4">文化地圖</h3>
+            <p class="text-sm text-gray-600 leading-relaxed">
+                走進銅門部落的故事地圖<br><br>
+                點選地圖上的標記，探索每個地方的文化、歷史與記憶。
+            </p>
+            <button class="bg-forest text-white px-6 py-2.5 rounded-full text-xs tracking-widest flex items-center space-x-2 hover:bg-gold transition">
+                <span>查看地圖</span>
+                <i class="fa-solid fa-arrow-right-long"></i>
+            </button>
+        </div>
+        
+        <div class="lg:col-span-5 relative bg-white/60 p-4 rounded-xl shadow-sm border border-black/5">
+            <img src="https://images.unsplash.com/photo-1524661135339-9140b00787e3?auto=format&fit=crop&w=800&q=80" alt="Map" class="w-full h-80 object-cover rounded-lg opacity-40 grayscale">
+            <div class="absolute top-1/4 left-1/3 text-forest animate-bounce"><i class="fa-solid fa-location-dot text-2xl"></i></div>
+            <div class="absolute top-1/2 right-1/4 text-gold"><i class="fa-solid fa-location-dot text-2xl"></i></div>
+            <div class="absolute bottom-1/3 left-1/2 text-forest"><i class="fa-solid fa-location-dot text-2xl"></i></div>
+            
+            <div class="absolute bottom-8 right-8 bg-white shadow rounded-md flex flex-col text-xs text-gray-600">
+                <button class="p-2 border-b border-gray-100 hover:bg-gray-50">+</button>
+                <button class="p-2 hover:bg-gray-50">-</button>
+            </div>
+        </div>
+
+        <div class="lg:col-span-4 space-y-3">
+            <p class="text-xs text-gray-400 uppercase tracking-widest font-bold mb-4">文化分類</p>
+            
+            <div class="flex justify-between items-center bg-white p-4 rounded-lg shadow-sm hover:translate-x-2 transition cursor-pointer">
+                <div class="flex items-center space-x-4">
+                    <span class="w-8 h-8 rounded-full bg-sand flex items-center justify-center text-forest"><i class="fa-solid fa-water text-sm"></i></span>
+                    <span class="font-medium text-sm">河流與地名</span>
+                </div>
+                <i class="fa-solid fa-chevron-right text-xs text-gray-400"></i>
+            </div>
+
+            <div class="flex justify-between items-center bg-white p-4 rounded-lg shadow-sm hover:translate-x-2 transition cursor-pointer">
+                <div class="flex items-center space-x-4">
+                    <span class="w-8 h-8 rounded-full bg-sand flex items-center justify-center text-forest"><i class="fa-solid fa-campground text-sm"></i></span>
+                    <span class="font-medium text-sm">傳統生活</span>
+                </div>
+                <i class="fa-solid fa-chevron-right text-xs text-gray-400"></i>
+            </div>
+
+            <div class="flex justify-between items-center bg-white p-4 rounded-lg shadow-sm hover:translate-x-2 transition cursor-pointer">
+                <div class="flex items-center space-x-4">
+                    <span class="w-8 h-8 rounded-full bg-sand flex items-center justify-center text-forest"><i class="fa-solid fa-hammer text-sm"></i></span>
+                    <span class="font-medium text-sm">工藝與技藝</span>
+                </div>
+                <i class="fa-solid fa-chevron-right text-xs text-gray-400"></i>
+            </div>
+
+            <div class="flex justify-between items-center bg-white p-4 rounded-lg shadow-sm hover:translate-x-2 transition cursor-pointer">
+                <div class="flex items-center space-x-4">
+                    <span class="w-8 h-8 rounded-full bg-sand flex items-center justify-center text-forest"><i class="fa-solid fa-tree text-sm"></i></span>
+                    <span class="font-medium text-sm">植物與山林</span>
+                </div>
+                <i class="fa-solid fa-chevron-right text-xs text-gray-400"></i>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 px-8 md:px-24 grid grid-cols-1 lg:grid-cols-12 gap-12 bg-white">
+        <div class="lg:col-span-4 space-y-6">
+            <h3 class="text-xs text-gold font-bold tracking-widest uppercase">關於同在在銅</h3>
+            <h4 class="text-3xl font-bold text-forest tracking-wide">我們是誰，我們為什麼做這件事</h4>
+            <p class="text-sm text-gray-600 leading-relaxed">
+                一群來自銅門部落的青年，選擇留在家鄉，<br>
+                用自己的方式記錄、學習與傳承。<br>
+                我們相信，只有認識自己的土地，<br>
+                才能走出屬於我們的未來。
+            </p>
+            <button class="bg-forest text-white px-6 py-3 rounded-full text-xs tracking-widest flex items-center space-x-2 hover:bg-gold transition">
+                <span>了解更多我們的故事</span>
+                <i class="fa-solid fa-arrow-right-long"></i>
+            </button>
+        </div>
+
+        <div class="lg:col-span-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="space-y-4">
+                <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=500&q=80" alt="青年行動" class="w-full h-64 object-cover rounded-xl shadow-md">
+                <h5 class="font-bold text-base text-forest text-center">青年行動</h5>
+                <p class="text-xs text-gray-500 text-center">用行動回應土地的呼喚</p>
+            </div>
+            <div class="space-y-4">
+                <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=500&q=80" alt="文化傳承" class="w-full h-64 object-cover rounded-xl shadow-md">
+                <h5 class="font-bold text-base text-forest text-center">文化傳承</h5>
+                <p class="text-xs text-gray-500 text-center">向耆老學習，讓技藝永續</p>
+            </div>
+            <div class="space-y-4">
+                <img src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?auto=format&fit=crop&w=500&q=80" alt="守護土地" class="w-full h-64 object-cover rounded-xl shadow-md">
+                <h5 class="font-bold text-base text-forest text-center">守護土地</h5>
+                <p class="text-xs text-gray-500 text-center">守護我們的山林與溪流</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-sand/50 py-20 px-8 md:px-24">
+        <div class="flex justify-between items-end mb-12">
+            <div>
+                <h3 class="text-2xl font-bold text-forest tracking-wider">最新活動</h3>
+                <p class="text-xs text-gray-500 mt-1">一起參與部落的大小事</p>
+            </div>
+            <button class="border border-forest text-forest px-5 py-2 rounded-full text-xs hover:bg-forest hover:text-white transition">
+                查看所有活動 <i class="fa-solid fa-arrow-right-long ml-1"></i>
+            </button>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white p-6 rounded-2xl shadow-sm flex items-center justify-between space-x-4 border border-black/5">
+                <div class="space-y-2 flex-1">
+                    <span class="text-xl font-bold text-forest block">12/20</span>
+                    <h4 class="font-bold text-sm">部落走讀：<br>砂卡礑的故事</h4>
+                    <button class="text-xs text-gold border border-gold/30 px-3 py-1 rounded-full hover:bg-gold hover:text-white transition">了解更多</button>
+                </div>
+                <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=300&q=80" class="w-24 h-24 object-cover rounded-xl">
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl shadow-sm flex items-center justify-between space-x-4 border border-black/5">
+                <div class="space-y-2 flex-1">
+                    <span class="text-xl font-bold text-forest block">01/15</span>
+                    <h4 class="font-bold text-sm">青年交流會：<br>文化與未來</h4>
+                    <button class="text-xs text-gold border border-gold/30 px-3 py-1 rounded-full hover:bg-gold hover:text-white transition">了解更多</button>
+                </div>
+                <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=300&q=80" class="w-24 h-24 object-cover rounded-xl">
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl shadow-sm flex items-center justify-between space-x-4 border border-black/5">
+                <div class="space-y-2 flex-1">
+                    <span class="text-xl font-bold text-forest block">02/08</span>
+                    <h4 class="font-bold text-sm">織布體驗工作坊：<br>梭織記憶</h4>
+                    <button class="text-xs text-gold border border-gold/30 px-3 py-1 rounded-full hover:bg-gold hover:text-white transition">了解更多</button>
+                </div>
+                <img src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=300&q=80" class="w-24 h-24 object-cover rounded-xl">
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-forest text-white/80 py-12 px-8 md:px-24 border-t border-white/10 text-sm">
+        <div class="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
+            <div class="flex items-center space-x-3">
+                <div class="border border-white/60 p-2 text-[10px] tracking-widest text-center font-bold text-white">
+                    同在<br>在銅
+                </div>
+                <div>
+                    <h2 class="text-base font-bold text-white tracking-wider">同在在銅</h2>
+                    <p class="text-[10px] opacity-60 tracking-widest">Tongarenza Tinung</p>
+                </div>
+            </div>
+            
+            <div class="flex space-x-8 text-xs tracking-widest">
+                <a href="#" class="hover:text-white transition">首頁</a>
+                <a href="#" class="hover:text-white transition">文化地圖</a>
+                <a href="#" class="hover:text-white transition">文化故事</a>
+                <a href="#" class="hover:text-white transition">活動資訊</a>
+                <a href="#" class="hover:text-white transition">關於我們</a>
+            </div>
+
+            <div class="flex space-x-4 text-lg">
+                <a href="#" class="hover:text-white transition"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" class="hover:text-white transition"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="hover:text-white transition"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#" class="hover:text-white transition"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
+        <div class="text-center md:text-left text-[11px] opacity-40 mt-8 border-t border-white/5 pt-6">
+            © 2024 同在在銅 Tongarenza Tinung. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>
